@@ -28,7 +28,6 @@ def api_request(site, uri, method, key, secret, consumer_key, body=None):
     if body:
         body = urlencode(body)
         headers['Content-type'] = 'application/x-www-form-urlencoded'
-    sys.stderr.write("%s %s %s\n" % (url, method, headers))
     return http.request(url, method, body=body, headers=headers)
 
 
