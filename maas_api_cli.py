@@ -33,7 +33,7 @@ def api_request(site, uri, method, key, secret, consumer_key, body=None):
 
 def usage():
     print("%s <-a api.key> <-m GET/POST/PUT/DELETE> <-b base MAAS URL>"
-          " <-u /partial/url/?op=foo> <-j input json file>" %
+          " <-u /partial/url/?op=foo> <-j input json string>" %
           os.path.basename(__file__))
     print(" -c, --suppress-content: suppress content")
     print("-r, --suppress-response: suppress response")
@@ -43,7 +43,7 @@ def usage():
     print("               -u,--uri: API uri"
           " (e.g. /accounts/?op=list_authorisation_tokens)")
     print("            -m,--method: GET/PUT/POST/DELETE")
-    print("        -j,--json-input: Post input in JSON form")
+    print("        -j,--json-input: Post input in string JSON form")
 
 
 def main(argv):
