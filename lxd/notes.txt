@@ -1,0 +1,2 @@
+1. To use password authentication, edit /etc/ssh/sshd_config and allow PasswordAuthentication, reboot `service ssh restart`
+
