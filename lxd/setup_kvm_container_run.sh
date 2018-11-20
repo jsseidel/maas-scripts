@@ -8,7 +8,7 @@ fi
 USER=jsseidel
 LAUNCHPAD_USER=$USER
 CONTAINER=maas-run
-CIDR=172.16.99.2/24
+CIDR=172.16.99.11/24
 lxc init ubuntu:bionic $CONTAINER -s default --no-profiles
 lxc network attach virbr0 $CONTAINER eth0 eth0
 lxc network attach virbr1 $CONTAINER eth1 eth1

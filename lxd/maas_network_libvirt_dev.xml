@@ -1,0 +1,12 @@
+<network>
+  <name>maasdev</name>
+  <forward mode='nat'>
+    <nat>
+      <port start='1024' end='65535'/>
+    </nat>
+  </forward>
+  <bridge name='virbr2' stp='off' delay='0'/>
+  <domain name='testnetdev'/>
+  <!-- Default route for guests -->
+  <ip address='172.16.100.1' netmask='255.255.255.0'></ip>
+</network>

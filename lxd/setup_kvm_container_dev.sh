@@ -8,10 +8,10 @@ fi
 USER=jsseidel
 LAUNCHPAD_USER=$USER
 CONTAINER=maas-dev
-CIDR=172.16.99.2/24
+CIDR=172.16.99.12/24
 lxc init ubuntu:bionic $CONTAINER -s default --no-profiles
 lxc network attach virbr0 $CONTAINER eth0 eth0
-lxc network attach virbr1 $CONTAINER eth1 eth1
+lxc network attach virbr2 $CONTAINER eth1 eth1
 lxc config set $CONTAINER user.user-data "#cloud-config
 users:
   - name: $USER
