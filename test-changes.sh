@@ -7,8 +7,6 @@
     diff $f $$.json 1>/dev/null 2>&1
     if [[ $? != "0" ]] ; then
         echo "$f is not properly formatted."
-        rm -f $$.json
-        exit 1
     fi
     rm -f $$.json
   done # || exit 1
