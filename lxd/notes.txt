@@ -17,3 +17,9 @@
     Would you like stale cached images to be updated automatically? (yes/no) [default=yes] 
     Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]:
     ```
+3. Run setup_lxc_maas.sh
+4. Inside the container, run:
+    sudo chsh -s /bin/bash maas
+    sudo su - maas
+    ssh-keygen -t rsa -N ''
+5. Then add a pod and set the virsh address to qemu+ssh://maas@<container_ip>/system
